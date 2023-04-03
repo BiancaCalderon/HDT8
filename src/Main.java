@@ -6,7 +6,7 @@ import java.util.PriorityQueue;
 public class Main {
 
     public static void main(String[] args) {
-        PriorityQueue<Proceso> pq = new PriorityQueue<>();
+        PriorityQueue<Proceso> cola = new PriorityQueue<>();
         String archivo = "C:\\Users\\bianc\\IdeaProjects\\HDT8\\procesos.txt";
         try (BufferedReader br = new BufferedReader(new FileReader(archivo))) {
             String linea;
@@ -15,7 +15,7 @@ public class Main {
                 String nombre = campos[0];
                 String usuario = campos[1];
                 int nice = Integer.parseInt(campos[2]);
-                pq.offer(new Proceso(nombre, usuario, nice));
+                cola.offer(new Proceso(nombre, usuario, nice));
             }
         } catch (IOException e) {
             System.out.println("Error al leer el archivo: " + e.getMessage());
@@ -29,12 +29,13 @@ public class Main {
                 System.out.println("Error al leer la entrada: " + e.getMessage());
                 System.exit(1);
             }
-            if (!pq.isEmpty()) {
-                Proceso p = pq.remove();
-                System.out.println(p.getNombre() + "," + p.getUsuario() + "," + p.getNice() + ",PR=" + (20 + p.getNice()));
+            if (!cola.isEmpty()) {
+                Proceso p = cola.remove();
+                System.out.println(p.getNombre() + " (" + p.getUsuario() + ", " + p.getNice() + ", PR=" + p.getPrioridad() + ")");
             } else {
-                System.out.println("La cola con prioridad está vacía.");
+                System.out.println("No hay más procesos en la cola.");
+                break;
             }
         }
+        }
     }
-}

@@ -40,22 +40,21 @@ public class VectorHeap<E extends Comparable<E>> extends PriorityQueue<E> {
     }
 
     protected void percolateDown(int root) {
-        E value = data.get(root);
-        while (root < data.size() / 2) { // para si la raíz es una hpja
+        E moved = data.size() > root ? data.get(root) : null;
+        while (root < data.size() / 2) { // para si la raíz es una hoja
             int child = left(root);
             if ((child < data.size() - 1)
                     && (data.get(child).compareTo(data.get(child + 1)) > 0)) {
                 child++; // hijo derecho menor
             }
-            if (value.compareTo(data.get(child)) <= 0) {
+            if (moved.compareTo(data.get(child)) <= 0) {
                 break; // ubicacion encontrada
             }
             data.set(root, data.get(child));
             root = child; // continua hacia abajo
         }
-        data.set(root, value);
+        data.set(root, moved);
     }
-
     @Override
     public boolean add(E value) {
         data.add(value);
