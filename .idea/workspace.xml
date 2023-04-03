@@ -4,10 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="395cbb3a-6256-4ac6-9ea0-a1e45be74a26" name="Changes" comment="Main &amp; FileReader Class">
+    <list default="true" id="395cbb3a-6256-4ac6-9ea0-a1e45be74a26" name="Changes" comment="JUnit Test">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HDT8.iml" beforeDir="false" afterPath="$PROJECT_DIR$/HDT8.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/VectorHeap.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/VectorHeap.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -59,7 +57,7 @@
       <option name="presentableId" value="Default" />
       <updated>1680397029602</updated>
       <workItem from="1680397031233" duration="1755000" />
-      <workItem from="1680473456671" duration="4154000" />
+      <workItem from="1680473456671" duration="5556000" />
     </task>
     <task id="LOCAL-00001" summary="Vector Heap class">
       <created>1680398140139</created>
@@ -75,7 +73,14 @@
       <option name="project" value="LOCAL" />
       <updated>1680475226606</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="JUnit Test">
+      <created>1680480391663</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1680480391663</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -84,15 +89,16 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Vector Heap class" />
     <MESSAGE value="Main &amp; FileReader Class" />
-    <option name="LAST_COMMIT_MESSAGE" value="Main &amp; FileReader Class" />
+    <MESSAGE value="JUnit Test" />
+    <option name="LAST_COMMIT_MESSAGE" value="JUnit Test" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/VectorHeap.java</url>
-          <line>42</line>
-          <option name="timeStamp" value="1" />
+          <line>74</line>
+          <option name="timeStamp" value="2" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

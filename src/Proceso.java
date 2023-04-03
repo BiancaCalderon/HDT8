@@ -3,6 +3,12 @@ public class Proceso implements Comparable<Proceso> {
     private String usuario;
     private int nice;
 
+    /***
+     *
+     * @param nombre
+     * @param usuario
+     * @param nice
+     */
     public Proceso(String nombre, String usuario, int nice) {
         this.nombre = nombre;
         this.usuario = usuario;

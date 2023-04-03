@@ -2,12 +2,21 @@ import java.util.PriorityQueue;
 import java.util.Vector;
 
 public class VectorHeap<E extends Comparable<E>> extends PriorityQueue<E> {
+    /**
+     * implementación de un Heap  utilizando un Vector como estructura
+     *  El heap está ordenado según la interfaz Comparable.
+     *
+      * @param <E> tipo de los elementos del heap
+     */
     protected Vector<E> data; // orden según heap
 
     public VectorHeap() {
         data = new Vector<E>();
     }
 
+    /**
+     *crea un Heap vacío
+     */
     public VectorHeap(Vector<E> v) {
         int i;
         data = new Vector<E>(v.size());
@@ -16,18 +25,37 @@ public class VectorHeap<E extends Comparable<E>> extends PriorityQueue<E> {
         }
     }
 
+    /**
+     *Devuelve el índice del padre
+     * @param i
+     * @return
+     */
     protected static int parent(int i) {
         return (i - 1) / 2;
     }
 
+    /**
+     *Devuelve el índice del hijo izquierdo de un nodo
+     * @param i
+     * @return
+     */
     protected static int left(int i) {
         return 2 * i + 1;
     }
 
+    /**
+     *Devuelve el índice del hijo derecho de un nodo
+     * @param i
+     * @return
+     */
     protected static int right(int i) {
         return 2 * (i + 1);
     }
 
+    /**
+     * Restablece la relación de orden en el heap
+     * @param leaf
+     */
     protected void percolateUp(int leaf) {
         int parent = parent(leaf);
         E value = data.get(leaf);
@@ -39,6 +67,10 @@ public class VectorHeap<E extends Comparable<E>> extends PriorityQueue<E> {
         data.set(leaf, value);
     }
 
+    /**
+     * Restablece la relación de orden en el heap
+     * @param root
+     */
     protected void percolateDown(int root) {
         E moved = data.size() > root ? data.get(root) : null;
         while (root < data.size() / 2) { // para si la raíz es una hoja
